@@ -11,6 +11,7 @@
                 <p>Naam: <?= $drink->drank ?></p>
                 <p>Categorie: <?= $drink->categorie ?></p>
                 <p>Besteld door: <?= $drink->besteld_door ?></p>
+                <p>Status: <?= $drink->status?></p>
         </div>
     <?php endforeach; ?>
 </body>
