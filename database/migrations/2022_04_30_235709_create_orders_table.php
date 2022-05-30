@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->string("drank");
             $table->string("categorie");
             $table->string("besteld_door");
+            $table->integer("aantal");
         });
     }
 

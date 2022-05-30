@@ -16,13 +16,15 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank'=> 'Cola',
             'categorie'=> "Frisdrank",
-            'besteld_door'=>"Erik"
+            'besteld_door'=>"Erik",
+            'aantal' => 1
         ]);
 
         DB::table('bestellingen')->insert([
             'drank'=> 'Grolsch',
             'categorie'=> "Bier",
-            'besteld_door'=>"Koen"
+            'besteld_door'=>"Koen",
+            'aantal' => 1
         ]);
     }
 }
