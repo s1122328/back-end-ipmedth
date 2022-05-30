@@ -23,6 +23,7 @@ class OrderController extends Controller
         $drink->categorie = $request->Categorie;
         $drink->besteld_door = $request->Besteld_door;
         $drink->aantal = $request->Aantal;
+        $drink->status = $request->Status;
         try {
             $drink->save();
             return response([
