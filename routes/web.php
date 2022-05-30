@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
+use App\Models\Drink;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/drinks', function () {
+    return view('drinks', [
+        'drinks' => Drink::all(),
+    ]);
+});
+
+// Route::get('/drinks/{drink}', function ($id) {
+//     return view('drinks', ['drink' => Drink::findOrFail($id)]);
+// });
+// Route::get('/drinks', 'OrderController@getAll');

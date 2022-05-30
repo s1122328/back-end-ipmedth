@@ -7,9 +7,13 @@ use App\Models\Drink;
 
 class OrderController extends Controller
 {
+    public function show($drankId) {
+        return Drank::find($drankId);
+    }
+
     public function getAll(){
         $drinks = \App\Models\Drink::all();
-        return $drinks;
+        return view('drinks', ['allDrinks' => $drinks]);
     }
 
     public function store(Request $request, \App\Models\Drink $drink){
