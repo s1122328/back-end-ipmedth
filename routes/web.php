@@ -15,7 +15,7 @@ use App\Models\Drink;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/drinks', [\App\Http\Controllers\OrderController::class, 'getAll']);
+//Route::get('/drinks', [\App\Http\Controllers\OrderController::class, 'getAll']);
 Route::get('/', function () {
     return view('welcome');
 });

@@ -13,7 +13,8 @@ class OrderController extends Controller
 
     public function getAll(){
         $drinks = \App\Models\Drink::all();
-        return view('drinks', ['allDrinks' => $drinks]);
+        return $drinks;
+        //return view('drinks', ['allDrinks' => $drinks]);
     }
 
     public function store(Request $request, \App\Models\Drink $drink){
