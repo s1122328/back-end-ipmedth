@@ -1,0 +1,22 @@
+body {
+    background: #ccc;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.bestelling {
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.gemaakt {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
