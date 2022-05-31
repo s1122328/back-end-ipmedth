@@ -14,7 +14,10 @@ class OrderController extends Controller
     public function getAll(){
         $drinks = \App\Models\Drink::all();
         return $drinks;
-        //return view('drinks', ['allDrinks' => $drinks]);
+    }
+
+    public function bottleClicked() {
+        // Send something to drinks view to show alert
     }
 
     public function store(Request $request, \App\Models\Drink $drink){

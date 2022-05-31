@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/drinks', [\App\Http\Controllers\OrderController::class, 'getAll']);
 Route::post('/drinks/store', [\App\Http\Controllers\OrderController::class, 'store']);
+Route::post('/drinks/clicked', [\App\Http\Controllers\OrderController::class, 'bottleClicked']);
+
 route::get('/gebruikers', [\App\Http\Controllers\UserController::class, 'AssignID']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
