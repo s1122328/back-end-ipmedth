@@ -11,4 +11,9 @@ class UserController extends Controller
         $user = \App\Models\User::all()->where('toegewezen', '!=', 'Nee')->first();
         return $user;
     }
+
+    public function index() {
+        $users = \App\Models\User::all();
+        return $users;
+    }
 }

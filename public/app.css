@@ -6,12 +6,6 @@ span,
 applet,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -131,9 +125,17 @@ table {
 }
 
 /* Start of changed CSS */
+:root {
+    --primary: #f2f2f2;
+    --secondary: #ff0000;
+    --tertiary: #000;
+}
+
 body {
     width: 90%;
     margin: 0 auto;
+    background-color: var(--primary);
+    color: var(--tertiary);
 }
 
 .navigation {
@@ -145,7 +147,15 @@ body {
 
 .nav_link {
     text-decoration: none;
-    color: black;
+    color: var(--tertiary);
+}
+
+.nav_link:hover {
+    color: red;
+}
+
+.navigation .current {
+    border-bottom: 1px solid var(--secondary);
 }
 
 .bestellingen {
@@ -160,18 +170,17 @@ body {
 
 .bestelling_row {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .bestelling_header {
-    font-size: larger;
     font-weight: bold;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--secondary);
     padding: 5px;
 }
 
 .bestelling_cell {
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--secondary);
     padding: 10px;
 }
