@@ -10,7 +10,7 @@ class Drink extends Model
     use HasFactory;
 
     protected $table = "bestellingen";
-    protected $fillable = ['drank', 'categorie', 'besteld_door', 'aantal', 'status'];
+    protected $fillable = ['drank', 'categorie', 'besteld_door', 'aantal', 'status', 'Prijs'];
     public $timestamps = false;
 
     public static function getBestellingByUser($usernames)

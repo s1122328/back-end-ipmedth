@@ -20,6 +20,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Pieter',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 2.70,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -28,6 +30,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Henk',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 3.50,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -36,6 +40,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Mark',
             'aantal' => 3,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -44,6 +50,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Freek',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -52,6 +60,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Pieter',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -60,6 +70,8 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Gerard',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 3.50,
+            
         ]);
 
         DB::table('bestellingen')->insert([
@@ -68,6 +80,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Jason',
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
         ]);
     }
 }

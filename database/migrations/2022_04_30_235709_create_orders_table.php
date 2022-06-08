@@ -20,6 +20,8 @@ class CreateOrdersTable extends Migration
             $table->string("besteld_door");
             $table->integer("aantal");
             $table->string("status");
+            $table->float("prijs");
+
         });
     }
 
