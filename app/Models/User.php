@@ -15,4 +15,10 @@ class User extends Authenticatable
     protected $table = "users";
     protected $fillable = ['name'];
     public $timestamps = false;
+
+    public static function find()
+    {
+        $users = User::all();
+        return $users->pluck('name');
+    }
 }

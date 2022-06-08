@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Models\Drink;
+use App\Models\User;
 
 
 /*
@@ -21,12 +22,21 @@ Route::get('/', function () {
 });
 
 Route::get('/drinks', function () {
-    return view('drinks', [
+    return view('bestellingenOverzicht', [
         'drinks' => Drink::all(),
     ]);
 });
 
-// Route::get('/drinks/{drink}', function ($id) {
-//     return view('drinks', ['drink' => Drink::findOrFail($id)]);
-// });
-// Route::get('/drinks', 'OrderController@getAll');
+Route::get('/klanten_overzicht', function () {
+    // gives all names
+    $usernames = User::find();
+    // Gives a list of drinks for all users
+    $drankjesPerUser = Drink::getBestellingByUser($usernames);
+    $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+
+    return view('klantOverzicht', [
+//        'user' => $usernames,
+        'aantallen' => $aantallenPerDrankje,
+        'bestellingen' => $drankjesPerUser
+    ]);
+});

@@ -25,5 +25,8 @@ class UserController extends Controller
                 'message' => 'Er is iets foutgegaan. Probeer het later opnieuw.'
             ], 500);
         }
+    public function index() {
+        $users = \App\Models\User::all();
+        return $users;
     }
 }
