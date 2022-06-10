@@ -29,14 +29,20 @@ Route::get('/drinks', function () {
 
 Route::get('/klanten_overzicht', function () {
     // gives all names
-    $usernames = User::find();
     // Gives a list of drinks for all users
-    $drankjesPerUser = Drink::getBestellingByUser($usernames);
-    $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+    // $drankjesPerUser = Drink::getBestellingByUser($usernames);
+    // $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+    // return view('klantOverzicht', [
+    //    'user' => $usernames,
+    //     'aantallen' => $aantallenPerDrankje,
+    //     'bestellingen' => $drankjesPerUser
+    // ]);
+
+    $userIds = User::all()->pluck('id');
+
+    $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
 
     return view('klantOverzicht', [
-//        'user' => $usernames,
-        'aantallen' => $aantallenPerDrankje,
-        'bestellingen' => $drankjesPerUser
+        'aantallenEnDrankjes' => $aantallenEnDrankjesArray
     ]);
 });

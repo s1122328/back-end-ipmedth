@@ -14,12 +14,14 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('bestellingen', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('bestel_id');
             $table->string("drank");
             $table->string("categorie");
-            $table->string("besteld_door");
+            $table->integer("user_id")->unsigned();
+            $table->foreign("user_id")->references("id")->on("users")->onDelete('restrict');
             $table->integer("aantal");
             $table->string("status");
+            $table->timestamp('created_at')->nullable();
         });
     }
 

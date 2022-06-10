@@ -17,7 +17,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Cola',
             'categorie' => 'Frisdrank',
-            'besteld_door' => 'Pieter',
+            'user_id' => 1,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
@@ -25,7 +25,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Grolsch',
             'categorie' => 'Bier',
-            'besteld_door' => 'Henk',
+            'user_id' => 2,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
@@ -33,7 +33,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Cabernet Sauvignon',
             'categorie' => 'Wijn',
-            'besteld_door' => 'Mark',
+            'user_id' => 3,
             'aantal' => 3,
             'status' => "Besteld",
         ]);
@@ -41,7 +41,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Heineken',
             'categorie' => 'Bier',
-            'besteld_door' => 'Freek',
+            'user_id' => 4,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
@@ -49,7 +49,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Jupiler',
             'categorie' => 'Bier',
-            'besteld_door' => 'Pieter',
+            'user_id' => 1,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
@@ -57,7 +57,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Bavaria',
             'categorie' => 'Bier',
-            'besteld_door' => 'Gerard',
+            'user_id' => 5,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
@@ -65,7 +65,7 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Ijwit',
             'categorie' => 'Bier',
-            'besteld_door' => 'Jason',
+            'user_id' => 6,
             'aantal' => 1,
             'status' => "Besteld",
         ]);
