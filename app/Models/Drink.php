@@ -44,7 +44,8 @@ class Drink extends Model
             $bestellingArray[$key] = $bestelling; 
         }
         $uitkomstArray = array_merge_recursive($aantalArray, $bestellingArray);
-        // $nieuweArray = $aantalArray + $bestellingArray;
+        // $uitkomstArray = $aantalArray + $bestellingArray;
+        // dd($uitkomstArray);
         return $uitkomstArray;
     }
 }

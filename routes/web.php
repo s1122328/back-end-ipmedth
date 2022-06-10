@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/drinks', function () {
-    return view('drinks', [
+    return view('bestellingenOverzicht', [
         'drinks' => Drink::all(),
     ]);
 });
@@ -42,6 +42,8 @@ Route::get('/klanten_overzicht', function () {
     
     $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
     return view('klantOverzicht', [
-    'aantallenEnDrankjes' => $aantallenEnDrankjesArray
+        'aantallenEnDrankjes' => $aantallenEnDrankjesArray
     ]);
-    });
+});
+
+Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'koppelKlantAanBril']);

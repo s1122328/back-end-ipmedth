@@ -17,44 +17,17 @@
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
 
-        <?php foreach ($aantallenEnDrankjes as $key=>$bestelling): ?>
-        <tr class="bestelling_row">
-            <td class="bestelling_cell"><?php echo $key ?></td>
-            <td class="bestelling_cell">
-                <?php foreach ($bestelling as $nummer=>$aparteBestelling): ?>
-                    <?= $aparteBestelling ?>
-                    <?php foreach ($$aparteBestelling as $anderNummer => $losseBestelling): ?>
-                        <?= $losseBestelling ?>
-                    <?php endforeach; ?>
-                <?php endforeach; ?>
-            </td>
-        </tr>
-        <?php endforeach ?>;
-
-        <!-- <?php foreach ($aantallenEnDrankjes as $key=>$bestelling): ?>
-        <tr class="bestelling_row">
-            <td class="bestelling_cell"><?php echo $key ?></td>
-            <td class="bestelling_cell">
-            <?php foreach ($bestelling as $nummer=>$aparteBestelling): ?>
-                <?= $bestelling[$nummer];  ?>
-            <?php endforeach; ?>
-            </td>
-            <td class="bestelling_cell"></td>
-        </tr>
-        <?php endforeach; ?> -->
-
-
-            <!-- <?php foreach ($aantallenEnDrankjes as $key =>$aantal) {
-                echo "<tr class='bestelling_cell'>";
-                foreach ($aantal as $nummer => $apartAantal) {
-                    echo "<td>";
-                    echo $apartAantal;
-                    echo "</td>";
+        <?php 
+            foreach ($aantallenEnDrankjes as $key => $bestelling) {
+                foreach ($bestelling as $number => $aparteBestelling) {
+                    if ((count($bestelling) % 2) === 0) {
+                        echo "is nul?";
+                    }
+                    
+                    echo $aparteBestelling;
                 }
-                echo "</tr>";
-            }; 
-            ?> -->
-        </tr>
+            }
+        ?>
         
     </table>
 </section>
