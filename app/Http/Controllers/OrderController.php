@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Drink;
 
+
 class OrderController extends Controller
 {
     public function show($drankId)
@@ -31,6 +32,7 @@ class OrderController extends Controller
         $drink->besteld_door = $request->Besteld_door;
         $drink->aantal = $request->Aantal;
         $drink->status = $request->Status;
+        $drink->prijs = $request->Prijs;
         try {
             $drink->save();
             return response([
@@ -43,8 +45,5 @@ class OrderController extends Controller
         }
     }
 
-    public function getKlantDrinks(int $klant_id)
-    {
-        // drankjes van klant ophalen
-    }
+
 }

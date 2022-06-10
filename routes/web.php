@@ -27,16 +27,18 @@ Route::get('/drinks', function () {
     ]);
 });
 
-Route::get('/klanten_overzicht', function () {
-    // gives all names
-    $usernames = User::find();
-    // Gives a list of drinks for all users
-    $drankjesPerUser = Drink::getBestellingByUser($usernames);
-    $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+Route::get('/klanten_overzicht', [\App\Http\Controllers\UserController::class,'getKlantDrinks']);
 
-    return view('klantOverzicht', [
-//        'user' => $usernames,
-        'aantallen' => $aantallenPerDrankje,
-        'bestellingen' => $drankjesPerUser
-    ]);
-});
+    // gives all names
+    // Gives a list of drinks for all users
+    // $drankjesPerUser = Drink::getBestellingByUser($usernames);
+    // $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+    //($drankjesPerUser);
+    //dd($aantallenPerDrankje);
+//     return view('klantOverzicht', [
+// //        'user' => $usernames,
+//         'aantallen' => $aantallenPerDrankje,
+//         'bestellingen' => $drankjesPerUser
+//     ]);
+
+
