@@ -16,11 +16,29 @@
             <th class="bestelling_cell bestelling_header">Volledige bestelling</th>
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
-        <tr class="bestelling_cell">
-            <?php foreach ($aantallenEnDrankjes as $key =>$aantal) {
-                echo $aantal;
+        <?php foreach ($aantallenEnDrankjes as $key=>$bestelling): ?>
+        <tr class="bestelling_row">
+            <!-- <td class="bestelling_cell"><?php echo $key ?></td> -->
+            <td class="bestelling_cell">
+            <?php foreach ($bestelling as $nummer=>$aparteBestelling): ?>
+                <?= $bestelling[$nummer];  ?>
+            <?php endforeach; ?>
+            </td>
+            <td class="bestelling_cell"></td>
+        </tr>
+        <?php endforeach; ?>
+
+        
+            <!-- <?php foreach ($aantallenEnDrankjes as $key =>$aantal) {
+                echo "<tr class='bestelling_cell'>";
+                foreach ($aantal as $nummer => $apartAantal) {
+                    echo "<td>";
+                    echo $apartAantal;
+                    echo "</td>";
+                }
+                echo "</tr>";
             }; 
-            ?>
+            ?> -->
         </tr>
         
     </table>

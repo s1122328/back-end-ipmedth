@@ -127,7 +127,7 @@ table {
 /* Start of changed CSS */
 :root {
     --primary: #f2f2f2;
-    --secondary: #ff0000;
+    --secondary: #000;
     --tertiary: #000;
 }
 

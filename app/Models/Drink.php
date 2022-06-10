@@ -40,10 +40,16 @@ class Drink extends Model
         foreach ($userIds as $key=>$id) {
             $aantal = Drink::where('user_id', $id)->pluck('aantal');
             $bestelling = Drink::where('user_id', $id)->pluck('drank');
+            $prijs = Drink::where('user_id', $id)->pluck('prijs');
             $aantalArray[$key] = $aantal;
             $bestellingArray[$key] = $bestelling; 
         }
-        $uitkomstArray = array_merge_recursive($aantalArray, $bestellingArray);
+        $uitkomstArray = array (
+            $aantalArray,
+            $bestellingArray
+        );
+        // dd($uitkomstArray);
+        // $uitkomstArray = array_merge_recursive($aantalArray, $bestellingArray);
         // $nieuweArray = $aantalArray + $bestellingArray;
         return $uitkomstArray;
     }
