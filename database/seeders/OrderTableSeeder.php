@@ -20,6 +20,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 1,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 2.70,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -28,6 +30,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 2,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 3.50,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -36,6 +40,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 3,
             'aantal' => 3,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -44,6 +50,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 4,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -52,6 +60,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 1,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
+
         ]);
 
         DB::table('bestellingen')->insert([
@@ -60,6 +70,8 @@ class OrderTableSeeder extends Seeder
             'user_id' => 5,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 3.50,
+            
         ]);
 
         DB::table('bestellingen')->insert([
@@ -68,6 +80,7 @@ class OrderTableSeeder extends Seeder
             'user_id' => 6,
             'aantal' => 1,
             'status' => "Besteld",
+            'prijs' => 4.00,
         ]);
     }
 }

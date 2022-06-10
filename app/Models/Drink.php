@@ -13,6 +13,7 @@ class Drink extends Model
     protected $fillable = ['drank', 'categorie', 'user_id', 'aantal', 'status'];
     public $timestamps = true;
 
+
     // public static function getBestellingByUser($usernames)
     // {
     //     $bestellingenArray = array();

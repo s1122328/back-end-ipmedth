@@ -22,6 +22,7 @@ class CreateOrdersTable extends Migration
             $table->integer("aantal");
             $table->string("status");
             $table->timestamp('created_at')->nullable();
+            $table->float("prijs");
         });
     }
 
