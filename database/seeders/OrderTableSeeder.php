@@ -17,8 +17,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Cola',
             'categorie' => 'Frisdrank',
-            'user_id' => 1,
             'aantal' => 1,
+            'user_id' => 1,
+            'besteld_door' => 'Pieter',
             'status' => "Besteld",
             'prijs' => 2.70,
 
@@ -27,8 +28,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Grolsch',
             'categorie' => 'Bier',
-            'user_id' => 2,
             'aantal' => 1,
+            'user_id' => 2,
+            'besteld_door' => 'Henk',
             'status' => "Besteld",
             'prijs' => 3.50,
 
@@ -37,8 +39,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Cabernet Sauvignon',
             'categorie' => 'Wijn',
-            'user_id' => 3,
             'aantal' => 3,
+            'user_id' => 3,
+            'besteld_door' => 'Freek',
             'status' => "Besteld",
             'prijs' => 4.00,
 
@@ -47,8 +50,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Heineken',
             'categorie' => 'Bier',
-            'user_id' => 4,
             'aantal' => 1,
+            'user_id' => 4,
+            'besteld_door' => 'Gerard',
             'status' => "Besteld",
             'prijs' => 4.00,
 
@@ -57,8 +61,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Jupiler',
             'categorie' => 'Bier',
-            'user_id' => 1,
             'aantal' => 1,
+            'user_id' => 1,
+            'besteld_door' => 'Pieter',
             'status' => "Besteld",
             'prijs' => 4.00,
 
@@ -67,8 +72,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Bavaria',
             'categorie' => 'Bier',
-            'user_id' => 5,
             'aantal' => 1,
+            'user_id' => 5,
+            'besteld_door' => 'Jason',
             'status' => "Besteld",
             'prijs' => 3.50,
             
@@ -77,8 +83,9 @@ class OrderTableSeeder extends Seeder
         DB::table('bestellingen')->insert([
             'drank' => 'Ijwit',
             'categorie' => 'Bier',
-            'user_id' => 6,
             'aantal' => 1,
+            'user_id' => 6,
+            'besteld_door' => 'Mark',
             'status' => "Besteld",
             'prijs' => 4.00,
         ]);
