@@ -6,6 +6,7 @@
 <body>
 <h1>Bar overzicht</h1>
 <nav class="navigation">
+    <a class="nav_link" href="koppel">Bril koppelen</a>
     <a class="nav_link" href="/drinks">Overzicht bestellingen</a>
     <a class="nav_link current" href="/klanten_overzicht">Overzicht klanten</a>
 </nav>

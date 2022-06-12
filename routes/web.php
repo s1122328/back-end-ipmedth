@@ -46,4 +46,5 @@ Route::get('/klanten_overzicht', function () {
     ]);
 });
 
-Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'koppelKlantAanBril']);
+Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
+Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);
