@@ -7,17 +7,24 @@ use App\Models\Drink;
 
 class OrderController extends Controller
 {
-    public function show($drankId) {
+    public function show($drankId)
+    {
         return Drank::find($drankId);
     }
 
-    public function getAll(){
+    public function getAll()
+    {
         $drinks = \App\Models\Drink::all();
         return $drinks;
-        //return view('drinks', ['allDrinks' => $drinks]);
     }
 
-    public function store(Request $request, \App\Models\Drink $drink){
+    public function bottleClicked()
+    {
+        // Send something to drinks view to show alert
+    }
+
+    public function store(Request $request, \App\Models\Drink $drink)
+    {
         $drink->id = $request->id;
         $drink->drank = $request->Drank;
         $drink->categorie = $request->Categorie;
@@ -34,5 +41,10 @@ class OrderController extends Controller
                 'message' => 'Er is iets foutgegaan. Probeer het later opnieuw.'
             ], 500);
         }
+    }
+
+    public function getKlantDrinks(int $klant_id)
+    {
+        // drankjes van klant ophalen
     }
 }

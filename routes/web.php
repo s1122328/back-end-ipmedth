@@ -33,6 +33,7 @@ Route::get('/klanten_overzicht', function () {
     // $drankjesPerUser = Drink::getBestellingByUser($usernames);
     // $aantallenPerDrankje = Drink::getAantalByUser($usernames);
     // return view('klantOverzicht', [
+<<<<<<< HEAD
     // 'user' => $usernames,
     // 'aantallen' => $aantallenPerDrankje,
     // 'bestellingen' => $drankjesPerUser
@@ -41,10 +42,24 @@ Route::get('/klanten_overzicht', function () {
     $userIds = User::all()->pluck('id');
     
     $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
+=======
+    //    'user' => $usernames,
+    //     'aantallen' => $aantallenPerDrankje,
+    //     'bestellingen' => $drankjesPerUser
+    // ]);
+
+    $userIds = User::all()->pluck('id');
+
+    $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
+
+>>>>>>> dev
     return view('klantOverzicht', [
         'aantallenEnDrankjes' => $aantallenEnDrankjesArray
     ]);
 });
+<<<<<<< HEAD
 
 Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
 Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);
+=======
+>>>>>>> dev

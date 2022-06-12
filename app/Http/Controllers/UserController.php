@@ -26,6 +26,7 @@ class UserController extends Controller
             ], 500);
         }
     }
+    
     public function index() {
         $users = \App\Models\User::all();
         return $users;
