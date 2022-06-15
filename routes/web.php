@@ -28,21 +28,18 @@ Route::get('/drinks', function () {
 });
 
 Route::get('/klanten_overzicht', function () {
-    // gives all names
-    // Gives a list of drinks for all users
-    // $drankjesPerUser = Drink::getBestellingByUser($usernames);
-    // $aantallenPerDrankje = Drink::getAantalByUser($usernames);
-    // return view('klantOverzicht', [
-    //    'user' => $usernames,
-    //     'aantallen' => $aantallenPerDrankje,
-    //     'bestellingen' => $drankjesPerUser
-    // ]);
-
+    
     $userIds = User::all()->pluck('id');
-
+    $usernames = User::all()->pluck('name');
+    
     $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
-
+    $totaalPrijs = Drink::getTotaalPrijs($userIds);
     return view('klantOverzicht', [
-        'aantallenEnDrankjes' => $aantallenEnDrankjesArray
+        'users' => $usernames,
+        'aantallenEnDrankjes' => $aantallenEnDrankjesArray,
+        'totaalPrijs' => $totaalPrijs,
     ]);
 });
+
+Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
+Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);

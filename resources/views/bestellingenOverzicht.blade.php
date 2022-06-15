@@ -6,9 +6,11 @@
 <body>
 <h1>Bar overzicht</h1>
 <nav class="navigation">
+    <a class="nav_link" href="koppel">Bril koppelen</a>
     <a class="nav_link current" href="/drinks">Overzicht bestellingen</a>
     <a class="nav_link" href="/klanten_overzicht">Overzicht klanten</a>
 </nav>
+<hr>
 <section class="bestellingen">
     <table class="bestelling_table">
         <tr class="bestelling_row">

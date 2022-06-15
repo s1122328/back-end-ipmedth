@@ -42,9 +42,4 @@ class OrderController extends Controller
             ], 500);
         }
     }
-
-    public function getKlantDrinks(int $klant_id)
-    {
-        // drankjes van klant ophalen
-    }
 }

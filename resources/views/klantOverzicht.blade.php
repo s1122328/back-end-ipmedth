@@ -6,9 +6,11 @@
 <body>
 <h1>Bar overzicht</h1>
 <nav class="navigation">
+    <a class="nav_link" href="koppel">Bril koppelen</a>
     <a class="nav_link" href="/drinks">Overzicht bestellingen</a>
     <a class="nav_link current" href="/klanten_overzicht">Overzicht klanten</a>
 </nav>
+<hr>
 <section class="bestellingen">
     <table class="bestelling_table">
         <tr class="bestelling_row">
@@ -16,45 +18,39 @@
             <th class="bestelling_cell bestelling_header">Volledige bestelling</th>
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
-
-        <?php foreach ($aantallenEnDrankjes as $key=>$bestelling): ?>
-        <tr class="bestelling_row">
-            <td class="bestelling_cell"><?php echo $key ?></td>
-            <td class="bestelling_cell">
-                <?php foreach ($bestelling as $nummer=>$aparteBestelling): ?>
-                    <?= $aparteBestelling ?>
-                    <?php foreach ($$aparteBestelling as $anderNummer => $losseBestelling): ?>
-                        <?= $losseBestelling ?>
-                    <?php endforeach; ?>
-                <?php endforeach; ?>
-            </td>
-        </tr>
-        <?php endforeach ?>;
-
-        <!-- <?php foreach ($aantallenEnDrankjes as $key=>$bestelling): ?>
-        <tr class="bestelling_row">
-            <td class="bestelling_cell"><?php echo $key ?></td>
-            <td class="bestelling_cell">
-            <?php foreach ($bestelling as $nummer=>$aparteBestelling): ?>
-                <?= $bestelling[$nummer];  ?>
-            <?php endforeach; ?>
-            </td>
-            <td class="bestelling_cell"></td>
-        </tr>
-        <?php endforeach; ?> -->
-
-
-            <!-- <?php foreach ($aantallenEnDrankjes as $key =>$aantal) {
-                echo "<tr class='bestelling_cell'>";
-                foreach ($aantal as $nummer => $apartAantal) {
-                    echo "<td>";
-                    echo $apartAantal;
+            
+            <?php 
+                foreach ($aantallenEnDrankjes as $key => $bestelling) {
+                    echo "<tr class='bestelling_row'>";
+                    echo "<td class='bestelling_cell'>";
+                    echo $users[$key];
                     echo "</td>";
+                    echo "<td class='bestelling_cell'>";
+                    foreach ($bestelling as $nummer => $losseBestelling) {
+                        if (count($bestelling) > 1) {
+                            if ($nummer == 0) {
+                                echo $losseBestelling;
+                            } else {
+                                echo ", ";
+                                echo $losseBestelling;
+                            }
+                        } else {
+                            echo $losseBestelling;
+                        }
+                    }
+                    echo "</td>";
+                    echo "<td class='bestelling_cell'>";
+                    foreach ($totaalPrijs[$key] as $key => $prijs) {
+                        $laatstePrijs = $prijs;
+                    }
+                    echo "€ ";
+                    echo $laatstePrijs;
+                    echo "</td>";
+                    echo "</tr>";
                 }
-                echo "</tr>";
-            }; 
-            ?> -->
+            ?>
         </tr>
+        
         
     </table>
 </section>

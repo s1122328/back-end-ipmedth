@@ -23,6 +23,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Pieter',
             'status' => "Besteld",
             'prijs' => 2.70,
+            'totaal_prijs' => 2.70
 
         ]);
 
@@ -35,7 +36,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Henk',
             'status' => "Besteld",
             'prijs' => 3.50,
-
+            'totaal_prijs' => 3.50
         ]);
 
         DB::table('bestellingen')->insert([
@@ -47,6 +48,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Freek',
             'status' => "Besteld",
             'prijs' => 4.00,
+            'totaal_prijs' => 4.00
 
         ]);
 
@@ -59,6 +61,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Gerard',
             'status' => "Besteld",
             'prijs' => 4.00,
+            'totaal_prijs' => 4.00
 
         ]);
 
@@ -71,6 +74,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Pieter',
             'status' => "Besteld",
             'prijs' => 4.00,
+            'totaal_prijs' => 6.70
 
         ]);
 
@@ -83,6 +87,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Jason',
             'status' => "Besteld",
             'prijs' => 3.50,
+            'totaal_prijs' => 3.50
             
         ]);
 
@@ -95,6 +100,7 @@ class OrderTableSeeder extends Seeder
             'besteld_door' => 'Mark',
             'status' => "Besteld",
             'prijs' => 4.00,
+            'totaal_prijs' => 4
         ]);
     }
 }
