@@ -20,10 +20,12 @@ class CreateOrdersTable extends Migration
             $table->integer("aantal");
             $table->integer("user_id")->unsigned();
             $table->foreign("user_id")->references("id")->on("users")->onDelete('restrict');
+            $table->string('bestelling');
             $table->string('besteld_door');
             $table->string("status");
             $table->timestamp('created_at')->nullable();
             $table->float("prijs");
+            $table->float("totaal_prijs");
         });
     }
 

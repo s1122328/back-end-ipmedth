@@ -15,6 +15,7 @@
         <a class="nav_link" href="/drinks">Overzicht bestellingen</a>
         <a class="nav_link" href="/klanten_overzicht">Overzicht klanten</a>
     </nav>
+    <hr>
     <section>
         <form action="AssignId" method="post">
             <label for="klantnaam">Klant naam: </label>

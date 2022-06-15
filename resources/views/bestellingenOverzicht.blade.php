@@ -10,6 +10,7 @@
     <a class="nav_link current" href="/drinks">Overzicht bestellingen</a>
     <a class="nav_link" href="/klanten_overzicht">Overzicht klanten</a>
 </nav>
+<hr>
 <section class="bestellingen">
     <table class="bestelling_table">
         <tr class="bestelling_row">

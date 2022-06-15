@@ -10,6 +10,7 @@
     <a class="nav_link" href="/drinks">Overzicht bestellingen</a>
     <a class="nav_link current" href="/klanten_overzicht">Overzicht klanten</a>
 </nav>
+<hr>
 <section class="bestellingen">
     <table class="bestelling_table">
         <tr class="bestelling_row">
@@ -17,17 +18,39 @@
             <th class="bestelling_cell bestelling_header">Volledige bestelling</th>
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
-
-        <?php 
-            foreach ($aantallenEnDrankjes as $key => $bestelling) {
-                foreach ($bestelling as $number => $aparteBestelling) {
-                    if ((count($bestelling) % 2) === 0) {
-                        echo "is nul?";
+            
+            <?php 
+                foreach ($aantallenEnDrankjes as $key => $bestelling) {
+                    echo "<tr class='bestelling_row'>";
+                    echo "<td class='bestelling_cell'>";
+                    echo $users[$key];
+                    echo "</td>";
+                    echo "<td class='bestelling_cell'>";
+                    foreach ($bestelling as $nummer => $losseBestelling) {
+                        if (count($bestelling) > 1) {
+                            if ($nummer == 0) {
+                                echo $losseBestelling;
+                            } else {
+                                echo ", ";
+                                echo $losseBestelling;
+                            }
+                        } else {
+                            echo $losseBestelling;
+                        }
                     }
-                    echo $aparteBestelling;
+                    echo "</td>";
+                    echo "<td class='bestelling_cell'>";
+                    foreach ($totaalPrijs[$key] as $key => $prijs) {
+                        $laatstePrijs = $prijs;
+                    }
+                    echo "€ ";
+                    echo $laatstePrijs;
+                    echo "</td>";
+                    echo "</tr>";
                 }
-            }
-        ?>
+            ?>
+        </tr>
+        
         
     </table>
 </section>
