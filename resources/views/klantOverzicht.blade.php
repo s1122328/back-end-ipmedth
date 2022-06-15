@@ -24,7 +24,6 @@
                     if ((count($bestelling) % 2) === 0) {
                         echo "is nul?";
                     }
-                    
                     echo $aparteBestelling;
                 }
             }
