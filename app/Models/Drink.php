@@ -10,7 +10,7 @@ class Drink extends Model
     use HasFactory;
 
     protected $table = "bestellingen";
-    protected $fillable = ['drank', 'categorie', 'user_id', 'aantal', 'status'];
+    protected $fillable = ['drank', 'categorie', 'user_id', 'aantal', 'aantal_en_drank', 'status'];
     public $timestamps = true;
 
 
