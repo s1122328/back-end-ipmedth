@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Drink;
 
+
 class OrderController extends Controller
 {
     public function show($drankId)
@@ -16,6 +17,13 @@ class OrderController extends Controller
     {
         $drinks = \App\Models\Drink::all();
         return $drinks;
+    }
+
+    public function GetStatus(Request $request)
+    {
+        $id = $request->id;
+        $drink = \App\Models\Drink::where('id',"=",$id)->pluck('status');
+        return $drink;
     }
 
     public function bottleClicked()
@@ -31,6 +39,7 @@ class OrderController extends Controller
         $drink->besteld_door = $request->Besteld_door;
         $drink->aantal = $request->Aantal;
         $drink->status = $request->Status;
+        $drink->prijs = $request->Prijs;
         try {
             $drink->save();
             return response([
@@ -42,4 +51,6 @@ class OrderController extends Controller
             ], 500);
         }
     }
+
+
 }

@@ -52,6 +52,20 @@
         </tr>
         
         
+        <ul>
+        @foreach ($users as $user)
+            <p>{{ $user->name }}</p>
+        @endforeach
+
+
+        </ul>
+
+
     </table>
+    <ul>
+        <p>{{$drankjes}}</p>
+        </ul>
 </section>
 </body>
+
+

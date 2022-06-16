@@ -26,7 +26,6 @@ class UserController extends Controller
             ], 500);
         }
     }
-    
     public function index() {
         $users = \App\Models\User::all();
         return $users;
@@ -57,4 +56,5 @@ class UserController extends Controller
     public function toonKoppelView () {
         return view('koppelBril');
     }
+}
 }

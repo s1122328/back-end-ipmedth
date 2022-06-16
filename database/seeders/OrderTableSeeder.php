@@ -102,5 +102,23 @@ class OrderTableSeeder extends Seeder
             'prijs' => 4.00,
             'totaal_prijs' => 4
         ]);
+
+        DB::table('bestellingen')->insert([
+            'drank' => 'Ijwit',
+            'categorie' => 'Bier',
+            'besteld_door' => 'Karel',
+            'aantal' => 1,
+            'status' => "Onderweg",
+            'prijs' => 4.00,
+        ]);
+
+        DB::table('bestellingen')->insert([
+            'drank' => 'Ijwit',
+            'categorie' => 'Bier',
+            'besteld_door' => 'Karel',
+            'aantal' => 1,
+            'status' => "Onderweg",
+            'prijs' => 4.00,
+        ]);
     }
 }

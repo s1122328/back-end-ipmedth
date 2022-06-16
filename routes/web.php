@@ -27,6 +27,7 @@ Route::get('/drinks', function () {
     ]);
 });
 
+<<<<<<< HEAD
 Route::get('/klanten_overzicht', function () {
     
     $userIds = User::all()->pluck('id');
@@ -43,3 +44,20 @@ Route::get('/klanten_overzicht', function () {
 
 Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
 Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);
+=======
+Route::get('/klanten_overzicht', [\App\Http\Controllers\UserController::class,'getKlantDrinks']);
+
+    // gives all names
+    // Gives a list of drinks for all users
+    // $drankjesPerUser = Drink::getBestellingByUser($usernames);
+    // $aantallenPerDrankje = Drink::getAantalByUser($usernames);
+    //($drankjesPerUser);
+    //dd($aantallenPerDrankje);
+//     return view('klantOverzicht', [
+// //        'user' => $usernames,
+//         'aantallen' => $aantallenPerDrankje,
+//         'bestellingen' => $drankjesPerUser
+//     ]);
+
+
+>>>>>>> StatusBestelling
