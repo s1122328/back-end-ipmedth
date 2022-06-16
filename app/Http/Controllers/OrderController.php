@@ -19,6 +19,13 @@ class OrderController extends Controller
         return $drinks;
     }
 
+    public function GetStatus(Request $request)
+    {
+        $id = $request->id;
+        $drink = \App\Models\Drink::where('id',"=",$id)->pluck('status');
+        return $drink;
+    }
+
     public function bottleClicked()
     {
         // Send something to drinks view to show alert
