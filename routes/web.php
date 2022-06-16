@@ -27,6 +27,24 @@ Route::get('/drinks', function () {
     ]);
 });
 
+<<<<<<< HEAD
+Route::get('/klanten_overzicht', function () {
+    
+    $userIds = User::all()->pluck('id');
+    $usernames = User::all()->pluck('name');
+    
+    $aantallenEnDrankjesArray = Drink::getAantallenEnDrankjes($userIds);
+    $totaalPrijs = Drink::getTotaalPrijs($userIds);
+    return view('klantOverzicht', [
+        'users' => $usernames,
+        'aantallenEnDrankjes' => $aantallenEnDrankjesArray,
+        'totaalPrijs' => $totaalPrijs,
+    ]);
+});
+
+Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
+Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);
+=======
 Route::get('/klanten_overzicht', [\App\Http\Controllers\UserController::class,'getKlantDrinks']);
 
     // gives all names
@@ -42,3 +60,4 @@ Route::get('/klanten_overzicht', [\App\Http\Controllers\UserController::class,'g
 //     ]);
 
 
+>>>>>>> StatusBestelling
