@@ -23,9 +23,11 @@ class CreateOrdersTable extends Migration
             $table->string('bestelling');
             $table->string('besteld_door');
             $table->string("status");
-            $table->timestamp('created_at')->nullable();
             $table->float("prijs");
             $table->float("totaal_prijs");
+            $table->timestamps();
+
+
         });
     }
 

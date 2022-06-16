@@ -85,7 +85,7 @@ class OrderTableSeeder extends Seeder
             'user_id' => 5,
             'bestelling' => '1 Bavaria',
             'besteld_door' => 'Jason',
-            'status' => "Besteld",
+            'status' => "Onderweg",
             'prijs' => 3.50,
             'totaal_prijs' => 3.50
         ]);
