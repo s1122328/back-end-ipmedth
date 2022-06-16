@@ -21,8 +21,8 @@ class OrderController extends Controller
 
     public function GetStatus(Request $request)
     {
-        $id = $request->id;
-        $drink = \App\Models\Drink::where('id',"=",$id)->pluck('status');
+        $id = $request->user_id;
+        $drink = \App\Models\Drink::where('user_id',"=",$id)->pluck('status');
         return $drink;
     }
 
