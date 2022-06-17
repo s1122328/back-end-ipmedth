@@ -28,6 +28,8 @@ Route::get('/drinks', function () {
     ]);
 });
 
+// Route::get('/klanten_overzicht', [\App\Http\Controllers\UserController::class,'getKlantDrinks']);
+
 Route::get('/klanten_overzicht', function () {
     
     $userIds = User::all()->pluck('id');

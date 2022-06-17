@@ -10,7 +10,7 @@ class Drink extends Model
     use HasFactory;
 
     protected $table = "bestellingen";
-    protected $fillable = ['drank', 'categorie', 'user_id', 'bestelling', 'aantal', 'status', 'totaal_prijs'];
+    protected $fillable = ['bestel_id', 'drank', 'categorie', 'aantal','user_id', 'bestelling','besteld_door',  'status','prijs', 'totaal_prijs','created_at','updated_at' ];
     public $timestamps = true;
 
     public static function getAantallenEnDrankjes($userIds) {
@@ -30,4 +30,6 @@ class Drink extends Model
         }
         return $totaalPrijsArray;
     }
+
+
 }
