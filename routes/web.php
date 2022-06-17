@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Models\Drink;
 use App\Models\User;
+use App\Http\Controllers\UserController;
 
 
 /*
@@ -41,5 +42,6 @@ Route::get('/klanten_overzicht', function () {
     ]);
 });
 
-Route::get('/koppel', [\App\Http\Controllers\UserController::class, 'toonKoppelView']);
-Route::post('/koppel', [\App\Http\Controllers\Usercontroller::class, 'koppelBril']);
+Route::get('/koppel', [UserController::class, 'toonKoppelView']);
+Route::get('edit/{id}', [UserController::class, 'showEdit']); 
+Route::post('edit', [Usercontroller::class, 'KoppelBril']);

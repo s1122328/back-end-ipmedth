@@ -16,32 +16,38 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Pieter',
-            'toegewezen' => 'Nee'
+            'toegewezen' => 'Nee',
+            'bril_id' => 0
         ]);
 
         DB::table('users')->insert([
             'name' => 'Henk',
-            'toegewezen' => 'Nee'
+            'toegewezen' => 'Nee',
+            'bril_id' => 0
         ]);
 
         DB::table('users')->insert([
             'name' => 'Freek',
-            'toegewezen' => 'Nee'
+            'toegewezen' => 'Nee',
+            'bril_id' => 0
         ]);
 
         DB::table('users')->insert([
             'name' => 'Gerard',
-            'toegewezen' => 'Ja'
+            'toegewezen' => 'Ja',
+            'bril_id' => 1
         ]);
 
         DB::table('users')->insert([
             'name' => 'Jason',
-            'toegewezen' => 'Nee'
+            'toegewezen' => 'Nee',
+            'bril_id' => 0
         ]);
 
         DB::table('users')->insert([
             'name' => 'Mark',
-            'toegewezen' => 'Ja'
+            'toegewezen' => 'Ja',
+            'bril_id' => 2
         ]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use DB;
 class UserController extends Controller
 {
     public function GetUnusuedID()
@@ -55,6 +56,27 @@ class UserController extends Controller
     }
 
     public function toonKoppelView () {
-        return view('koppelBril');
+        $users = UserController::index();
+        return view('koppelBril', [
+            'users' => $users,
+        ]);
+    }
+
+    public function showEdit($id) {
+        $user = User::findUser($id);
+        return view('edit', [
+            'user' => $user
+        ]);
+    }
+
+    public function KoppelBril(Request $request) {
+        DB::table('users')->where('id', $request->id)->update([
+            'bril_id'=>$request->bril_id,
+        ]);
+        return redirect('koppel');
+        // $users = UserController::index();
+        // return view('koppelBril', [
+        //     'users' => $users,
+        // ]);
     }
 }

@@ -18,7 +18,6 @@ class CreateOrdersTable extends Migration
             $table->string("drank");
             $table->string("categorie");
             $table->integer("aantal");
-            $table->string("bestelling");
             $table->integer("user_id")->unsigned();
             $table->foreign("user_id")->references("id")->on("users")->onDelete('restrict');
             $table->string('bestelling');
