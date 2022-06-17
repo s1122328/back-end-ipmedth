@@ -31,5 +31,8 @@ class Drink extends Model
         return $totaalPrijsArray;
     }
 
-
+    public static function getBestelling($bestel_id) {
+        $bestelling = Drink::where('bestel_id', $bestel_id)->get();
+        return $bestelling;
+    }
 }

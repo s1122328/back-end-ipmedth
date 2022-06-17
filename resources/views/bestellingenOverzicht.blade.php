@@ -24,7 +24,8 @@
             <td class="bestelling_cell"><?=$drink->bestel_id ?></td>
             <td class="bestelling_cell"><?=$drink->besteld_door ?></td>
             <td class="bestelling_cell"><?=$drink->aantal?>x <?=$drink->drank ?></td>
-            <td class="bestelling_cell"><?=$drink->status?></td>
+            <!-- <td class="bestelling_cell"><?=$drink->status?></td> -->
+            <td class="bestelling_cell"><a href={{"bewerkStatus/".$drink['bestel_id']}}><?=$drink->status?></a></td>
         </tr>
         <?php endforeach; ?>
     </table>

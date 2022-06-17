@@ -47,3 +47,5 @@ Route::get('/klanten_overzicht', function () {
 Route::get('/koppel', [UserController::class, 'toonKoppelView']);
 Route::get('edit/{id}', [UserController::class, 'showEdit']); 
 Route::post('edit', [Usercontroller::class, 'KoppelBril']);
+
+Route::get('bewerkStatus/{id}', [OrderController::class, 'statusBewerken']);
