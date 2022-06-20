@@ -16,14 +16,26 @@
         <a class="nav_link" href="/klanten_overzicht">Overzicht klanten</a>
     </nav>
     <hr>
-    <section>
-        <form action="AssignId" method="post">
-            <label for="klantnaam">Klant naam: </label>
-            <input type="text" id="klantnaam">
-            <label for="brilId">Bril ID: </label>
-            <input type="text" id="brilId">
-            <button>Koppel</button>
-        </form>
-    </section>
+    <p>Hier is het huidige overzicht te zien van de gebruikers die gekoppeld zijn aan een bril. Door op de knop 'Bewerken' te drukken opent er een nieuw scherm waarin het ID van de bril van de gebruiker kan worden aangepast.</p>
+    <table class="bestelling_table">
+        <tr class="bestelling_row">
+            <th class='bestelling_cell bestelling_header'>Klantnaam</th>
+            <th class='bestelling_cell bestelling_header'>Toegewezen</th>
+            <th class='bestelling_cell bestelling_header'>Bril ID</th>
+            <th class='bestelling_cell bestelling_header'>Bewerken</th>
+        </tr>
+        @foreach ($users as $key=>$user)
+            <tr class="bestelling_row">
+                <td class='bestelling_cell'>{{$user['name']}}</td>
+                <td class='bestelling_cell'>{{$user['toegewezen']}}</td>
+                @if ($user['bril_id'] > 0) 
+                    <td class='bestelling_cell'>{{$user['bril_id']}}</td>
+                    @else 
+                    <td class='bestelling_cell'></td>
+                @endif
+                <td class="bestelling_cell"><a href={{"edit/".$user['id']}}>Bewerken</a></td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>
