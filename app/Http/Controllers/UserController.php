@@ -70,12 +70,16 @@ class UserController extends Controller
 
     public function KoppelBril(Request $request) {
         DB::table('users')->where('id', $request->id)->update([
+            'toegewezen'=>'Ja',
             'bril_id'=>$request->bril_id,
         ]);
         return redirect('koppel');
-        // $users = UserController::index();
-        // return view('koppelBril', [
-        //     'users' => $users,
-        // ]);
+    }
+
+    public function ontkoppelBril() {
+        DB::table('users')->update([
+            'toegewezen'=>'Nee',
+            'bril_id'=>0
+        ]);
     }
 }

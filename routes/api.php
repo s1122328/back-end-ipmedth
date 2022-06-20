@@ -26,6 +26,7 @@ Route::get('/klant_drank', [\App\Http\Controllers\OrderController::class, 'getKl
 
 Route::get('/alleGebruikers', [\App\Http\Controllers\UserController::class, 'index']);
 route::get('/gebruikers', [\App\Http\Controllers\UserController::class, 'AssignID']);
+Route::get('/ontkoppel', [\App\Http\Controllers\UserController::class, 'ontkoppelBril']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

@@ -22,7 +22,7 @@
             <th class='bestelling_cell bestelling_header'>Klantnaam</th>
             <th class='bestelling_cell bestelling_header'>Toegewezen</th>
             <th class='bestelling_cell bestelling_header'>Bril ID</th>
-            <th class='bestelling_cell bestelling_header'>Bewerken</th>
+            <th class='bestelling_cell bestelling_header'>Bewerk bril ID</th>
         </tr>
         @foreach ($users as $key=>$user)
             <tr class="bestelling_row">
@@ -33,9 +33,12 @@
                     @else 
                     <td class='bestelling_cell'></td>
                 @endif
-                <td class="bestelling_cell"><a href={{"edit/".$user['id']}}>Bewerken</a></td>
+                <td class="bestelling_cell"><a class="status_bewerken" href={{"edit/".$user['id']}}>Bewerken</a></td>
             </tr>
         @endforeach
     </table>
+    <div class="ontkoppel_brillen">
+        <button class="ontkoppel_brillen_button" onclick="toonOntkoppelAlert()">Ontkoppel alle brillen</button>
+    </div>
 </body>
 </html>

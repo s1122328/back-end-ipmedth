@@ -19,7 +19,7 @@ use App\Http\Controllers\UserController;
 */
 //Route::get('/drinks', [\App\Http\Controllers\OrderController::class, 'getAll']);
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/koppel');
 });
 
 Route::get('/drinks', function () {
