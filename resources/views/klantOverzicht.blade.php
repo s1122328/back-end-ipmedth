@@ -19,37 +19,36 @@
             <th class="bestelling_cell bestelling_header">Volledige bestelling</th>
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
-            <?php 
-                foreach ($aantallenEnDrankjes as $key => $bestelling) {
-                    echo "<tr class='bestelling_row'>";
-                    echo "<td class='bestelling_cell'>";
-                    echo $users[$key];
-                    echo "</td>";
-                    echo "<td class='bestelling_cell'>";
-                    foreach ($bestelling as $nummer => $losseBestelling) {
-                        if (count($bestelling) > 1) {
-                            if ($nummer == 0) {
-                                echo $losseBestelling;
+            <?php foreach ($aantallenEnDrankjes as $key => $bestelling): ?>
+                <tr class="bestelling_row">
+                    <td class="bestelling_cell"><?= $users[$key] ?></td>
+                    <?php 
+                        echo "<td class='bestelling_cell'>";
+                        foreach ($bestelling as $nummer => $losseBestelling) {
+                            if (count($bestelling) > 1) {
+                                if ($nummer == 0) {
+                                    echo $losseBestelling;
+                                } else {
+                                    echo ", ";
+                                    echo $losseBestelling;
+                                }
                             } else {
-                                echo ", ";
                                 echo $losseBestelling;
                             }
-                        } else {
-                            echo $losseBestelling;
                         }
-                    }
-                    echo "</td>";
-                    echo "<td class='bestelling_cell'>";
-                    foreach ($totaalPrijs[$key] as $key => $prijs) {
-                        $laatstePrijs = $prijs;
-                    }
-                    echo "€ ";
-                    echo $laatstePrijs;
-                    echo "</td>";
-                    echo "</tr>";
-                }
-            ?>
-        </tr>
+                        echo "</td>";
+                    ?>
+                    <?php
+                        echo "<td class='bestelling_cell'>";
+                        foreach ($totaalPrijs[$key] as $key => $prijs) {
+                            $laatstePrijs = $prijs;
+                        }
+                        echo "€ ";
+                        echo $laatstePrijs;
+                        echo "</td>";
+                    ?>
+                </tr>
+            <?php endforeach; ?>
     </table>
 </section>
 </body>
