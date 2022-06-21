@@ -42,7 +42,6 @@ class OrderController extends Controller
         $drink->prijs = $request->Prijs;
         $drink->bestelling = $request->Bestelling;
         $drink->totaal_prijs = $request->Totaal_prijs;
-        Debug.Log($drink);
         try {
             $drink->save();
             return response([
