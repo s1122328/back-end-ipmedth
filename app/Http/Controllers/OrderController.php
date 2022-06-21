@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Drink;
-
+use DB;
 
 class OrderController extends Controller
 {
@@ -54,5 +54,10 @@ class OrderController extends Controller
         }
     }
 
-
+    public function statusBewerken($id) {
+        DB::table('bestellingen')->where('bestel_id', $id)->update([
+            'status'=> "Onderweg",
+        ]);
+        return redirect('drinks');
+    }
 }

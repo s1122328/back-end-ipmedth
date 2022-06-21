@@ -30,6 +30,4 @@ class Drink extends Model
         }
         return $totaalPrijsArray;
     }
-
-
 }

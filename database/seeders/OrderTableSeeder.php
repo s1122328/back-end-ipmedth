@@ -24,7 +24,6 @@ class OrderTableSeeder extends Seeder
             'status' => "Besteld",
             'prijs' => 2.70,
             'totaal_prijs' => 2.70
-
         ]);
 
         DB::table('bestellingen')->insert([
@@ -49,7 +48,6 @@ class OrderTableSeeder extends Seeder
             'status' => "Besteld",
             'prijs' => 4.00,
             'totaal_prijs' => 4.00
-
         ]);
 
         DB::table('bestellingen')->insert([
@@ -62,7 +60,6 @@ class OrderTableSeeder extends Seeder
             'status' => "Besteld",
             'prijs' => 4.00,
             'totaal_prijs' => 4.00
-
         ]);
 
         DB::table('bestellingen')->insert([
@@ -75,7 +72,6 @@ class OrderTableSeeder extends Seeder
             'status' => "Besteld",
             'prijs' => 4.00,
             'totaal_prijs' => 6.70
-
         ]);
 
         DB::table('bestellingen')->insert([
@@ -90,5 +86,16 @@ class OrderTableSeeder extends Seeder
             'totaal_prijs' => 3.50
         ]);
 
+        DB::table('bestellingen')->insert([
+            'drank' => 'Heineken',
+            'categorie' => 'Bier',
+            'aantal' => 1,
+            'user_id' => 6,
+            'bestelling' => '1 Heineken',
+            'besteld_door' => 'Mark',
+            'status' => "Besteld",
+            'prijs' => 3.20,
+            'totaal_prijs' => 3.20
+        ]);
     }
 }

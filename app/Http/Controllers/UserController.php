@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use DB;
 class UserController extends Controller
 {
     public function GetUnusuedID()
@@ -26,34 +27,38 @@ class UserController extends Controller
             ], 500);
         }
     }
+
     public function index() {
         $users = \App\Models\User::all();
         return $users;
     }
 
-    public function getKlantDrinks()
-    {
-        //e('toegewezen','=','ja')->get();
-        $users = \App\Models\User::all();
-        $drankjes = \App\Models\Drink::all();
-        $totaal = array();
-        foreach ($users as $user) 
-        {   
-            foreach($drankjes as $drankje)
-            {
-                $drankje = \App\Models\Drink::where('besteld_door','=', $user)->get();
-                $totaal[] = $user;
-            }
-            //$drankje = \App\Models\Drink::where('besteld_door','=',$user->besteld_door)->get();
-        }   
-        return view('klanten.show', [
+    public function toonKoppelView () {
+        $users = UserController::index();
+        return view('koppelBril', [
             'users' => $users,
-            'drankjes' =>$totaal,
         ]);
-        
     }
 
-    public function toonKoppelView () {
-        return view('koppelBril');
+    public function showEdit($id) {
+        $user = User::findUser($id);
+        return view('edit', [
+            'user' => $user
+        ]);
+    }
+
+    public function KoppelBril(Request $request) {
+        DB::table('users')->where('id', $request->id)->update([
+            'toegewezen'=>'Ja',
+            'bril_id'=>$request->bril_id,
+        ]);
+        return redirect('koppel');
+    }
+
+    public function ontkoppelBril() {
+        DB::table('users')->update([
+            'toegewezen'=>'Nee',
+            'bril_id'=>0
+        ]);
     }
 }

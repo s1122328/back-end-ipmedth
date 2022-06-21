@@ -12,13 +12,13 @@
 </nav>
 <hr>
 <section class="bestellingen">
+    <p>In het onderstaande overzicht staat aangegeven wat de volledige bestelling is per klant.</p>
     <table class="bestelling_table">
         <tr class="bestelling_row">
             <th class="bestelling_cell bestelling_header">Klant naam</th>
             <th class="bestelling_cell bestelling_header">Volledige bestelling</th>
             <th class="bestelling_cell bestelling_header">Totaal prijs</th>
         </tr>
-            
             <?php 
                 foreach ($aantallenEnDrankjes as $key => $bestelling) {
                     echo "<tr class='bestelling_row'>";

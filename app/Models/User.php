@@ -21,4 +21,9 @@ class User extends Authenticatable
         $users = User::all();
         return $users->pluck('name');
     }
+
+    public function findUser($id) {
+        $user = User::where('id', $id)->get();
+        return $user;
+    }
 }
