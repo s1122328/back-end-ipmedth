@@ -11,7 +11,7 @@ class Drink extends Model
 
     protected $table = "bestellingen";
     protected $fillable = ['bestel_id', 'drank', 'categorie', 'aantal','user_id', 'bestelling','besteld_door',  'status','prijs', 'totaal_prijs','created_at','updated_at' ];
-    public $timestamps = false;
+    public $timestamps = true;
 
     public static function getAantallenEnDrankjes($userIds) {
         $aantalEnDrankjeArray = [];
@@ -29,10 +29,5 @@ class Drink extends Model
             $totaalPrijsArray[$key] = $totaalPrijs;
         }
         return $totaalPrijsArray;
-    }
-
-    public static function getBestelling($bestel_id) {
-        $bestelling = Drink::where('bestel_id', $bestel_id)->get();
-        return $bestelling;
     }
 }

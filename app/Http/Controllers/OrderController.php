@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Drink;
 use DB;
 
-
-
 class OrderController extends Controller
 {
     public function show($drankId)
