@@ -24,7 +24,6 @@
             <td class="bestelling_cell"><?=$drink->bestel_id ?></td>
             <td class="bestelling_cell"><?=$drink->besteld_door ?></td>
             <td class="bestelling_cell"><?=$drink->aantal?>x <?=$drink->drank ?></td>
-            <!-- <td class="bestelling_cell"><?=$drink->status?></td> -->
             <?php if ($drink->status != 'Onderweg'): ?>
                 <td class="bestelling_cell"><a class="status_bewerken" href={{"bewerkStatus/".$drink['bestel_id']}}><?=$drink->status?></a></td>
             <?php else: ?>
