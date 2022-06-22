@@ -33,7 +33,6 @@ class OrderController extends Controller
 
     public function store(Request $request, \App\Models\Drink $drink)
     {
-        $drink->user_id = $request->User_id;
         $drink->drank = $request->Drank;
         $drink->categorie = $request->Categorie;
         $drink->besteld_door = $request->Besteld_door;

@@ -9,13 +9,14 @@ class UserController extends Controller
 {
     public function GetUnusuedID()
     {
-        $user = \App\Models\User::all()->where('toegewezen', '!=', 'Ja')->first();
+        $user = \App\Models\User::all()->where('toegewezen', '!=', 'Ja')->pluck('id')->first();
         return $user;
     }
 
     public function AssignID(Request $request, \App\Models\User $user){
-        $user = user::where('id', $request->id)->first();
+        $user = \App\Models\User::all()->where('toegewezen', '!=', 'Ja')->first();
         $user->toegewezen = $request->Toegewezen;
+        $user->bril_id = $request->bril_id;
         try {
             $user->save();
             return response([
