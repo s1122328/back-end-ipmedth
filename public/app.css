@@ -200,7 +200,7 @@ table {
     text-align: center;
 }
 
-.status_bewerken {
+.status_bewerken, .back_button {
     box-sizing: border-box;
     text-decoration: none;
     background-color: var(--primary);
@@ -209,8 +209,12 @@ table {
     color: var(--secondary);
 }
 
-.status_bewerken:hover {
+.status_bewerken:hover, .back_button:hover {
     color: red;
+}
+
+.back_button_margin {
+    margin-top: 100px;
 }
 
 .ontkoppel_brillen {
@@ -233,4 +237,12 @@ button:hover {
 
 input {
     margin-top: 10px;
+}
+
+.edit_id {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 10%;
 }
