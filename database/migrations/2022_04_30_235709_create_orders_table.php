@@ -11,6 +11,8 @@ class CreateOrdersTable extends Migration
      *
      * @return void
      */
+    //HIERONDER IS GEMAAKT DOOR VICTOR
+
     public function up()
     {
         Schema::create('bestellingen', function (Blueprint $table) {

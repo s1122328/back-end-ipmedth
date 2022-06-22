@@ -31,6 +31,7 @@ class UserTableSeeder extends Seeder
             'toegewezen' => 'Nee',
             'bril_id' => 0
         ]);
+    //HIERONDER IS GEMAAKT DOOR VICTOR
 
         DB::table('users')->insert([
             'name' => 'Gerard',

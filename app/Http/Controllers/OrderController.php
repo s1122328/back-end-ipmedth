@@ -8,17 +8,14 @@ use DB;
 
 class OrderController extends Controller
 {
-    public function show($drankId)
-    {
-        return Drank::find($drankId);
-    }
-
+    //HIERONDER IS GEMAAKT DOOR VICTOR
     public function getAll()
     {
         $drinks = \App\Models\Drink::all();
         return $drinks;
     }
 
+    //HIERONDER IS GEMAAKT DOOR VICTOR
     public function GetStatus(Request $request)
     {
         $id = $request->user_id;
@@ -31,6 +28,8 @@ class OrderController extends Controller
         // Send something to drinks view to show alert
     }
 
+
+    //HIERONDER IS GEMAAKT DOOR VICTOR
     public function store(Request $request, \App\Models\Drink $drink)
     {
         $drink->drank = $request->Drank;

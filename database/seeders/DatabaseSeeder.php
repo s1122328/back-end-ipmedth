@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+    //HIERONDER IS GEMAAKT DOOR VICTOR
+
         $this->call([
             UserTableSeeder::class,
             OrderTableSeeder::class,

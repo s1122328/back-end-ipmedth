@@ -12,6 +12,8 @@ class OrderTableSeeder extends Seeder
      *
      * @return void
      */
+    //HIERONDER IS GEMAAKT DOOR VICTOR
+
     public function run()
     {
         DB::table('bestellingen')->insert([

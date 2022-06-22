@@ -12,6 +12,7 @@ class Drink extends Model
     protected $table = "bestellingen";
     protected $fillable = ['bestel_id', 'drank', 'categorie', 'aantal', 'bestelling','besteld_door', 'status','prijs', 'totaal_prijs','created_at','updated_at' ];
     public $timestamps = true;
+    //HIERBOVEN IS GEMAAKT DOOR VICTOR
 
     public static function getAantallenEnDrankjes($userIds) {
         $aantalEnDrankjeArray = [];

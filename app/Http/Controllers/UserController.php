@@ -7,12 +7,14 @@ use App\Models\User;
 use DB;
 class UserController extends Controller
 {
+    //HIERONDER IS GEMAAKT DOOR VICTOR
     public function GetUnusuedID()
     {
         $user = \App\Models\User::all()->where('toegewezen', '!=', 'Ja')->pluck('id')->first();
         return $user;
     }
 
+    //HIERONDER IS GEMAAKT DOOR VICTOR
     public function AssignID(Request $request, \App\Models\User $user){
         $user = \App\Models\User::all()->where('toegewezen', '!=', 'Ja')->first();
         $user->toegewezen = $request->Toegewezen;

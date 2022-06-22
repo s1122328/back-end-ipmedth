@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 Route::get('/drinks', [\App\Http\Controllers\OrderController::class, 'getAll']);
 Route::post('/drinks/store', [\App\Http\Controllers\OrderController::class, 'store']);
 Route::get('/gebruikers/get', [\App\Http\Controllers\UserController::class, 'GetUnusuedID']);
 Route::post('/gebruikers/setid', [\App\Http\Controllers\UserController::class, 'AssignID']);
 Route::get('/gebruikers/getstatus', [\App\Http\Controllers\OrderController::class, 'GetStatus']);
+    //HIERBOVEN IS GEMAAKT DOOR VICTOR
 
 Route::post('/drinks/clicked', [\App\Http\Controllers\OrderController::class, 'bottleClicked']);
 
