@@ -17,6 +17,7 @@
             <th class="bestelling_cell bestelling_header">Bestel ID</th>
             <th class="bestelling_cell bestelling_header">Klantnaam</th>
             <th class="bestelling_cell bestelling_header">Bestelling</th>
+            <th class="bestelling_cell bestelling_header">Toegevoegd op</th>
             <th class="bestelling_cell bestelling_header">Status</th>
         </tr>
         <?php foreach ($drinks as $drink): ?>
@@ -24,7 +25,7 @@
             <td class="bestelling_cell"><?=$drink->bestel_id ?></td>
             <td class="bestelling_cell"><?=$drink->besteld_door ?></td>
             <td class="bestelling_cell"><?=$drink->aantal?>x <?=$drink->drank ?></td>
-            <!-- <td class="bestelling_cell"><?=$drink->status?></td> -->
+            <td class="bestelling_cell"><?=$drink->created_at?></td>
             <?php if ($drink->status != 'Onderweg'): ?>
                 <td class="bestelling_cell"><a class="status_bewerken" href={{"bewerkStatus/".$drink['bestel_id']}}><?=$drink->status?></a></td>
             <?php else: ?>
